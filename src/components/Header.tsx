@@ -37,7 +37,7 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Globe className="text-blue-600" size={32} />
-            <h1 className="text-2xl font-bold text-gray-900">GeoLearn</h1>
+            <h1 className="text-2xl font-bold text-gray-900">Pragati.ai</h1>
           </div>
           
           {/* Search Bar - Hidden on mobile, shown on larger screens */}
@@ -173,7 +173,11 @@ export function Header() {
         {isMobileMenuOpen && (
           <div className="lg:hidden mt-4 bg-white rounded-lg shadow-lg">
             <nav className="flex flex-col">
-              <Link to="/" className="flex items-center gap-2 p-4 text-gray-600 hover:bg-gray-50">
+              <Link 
+                to="/" 
+                className="flex items-center gap-2 p-4 text-gray-600 hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 <Home size={20} />
                 <span>Home</span>
               </Link>
@@ -194,33 +198,45 @@ export function Header() {
                   <div className="mb-4">
                     <h3 className="font-semibold mb-2">Physical Geography</h3>
                     <ul className="space-y-2 ml-6">
-                      <li><a href="#" className="text-gray-600">Landforms</a></li>
-                      <li><a href="#" className="text-gray-600">Climate Systems</a></li>
-                      <li><a href="#" className="text-gray-600">Ecosystems</a></li>
+                      <li><a href="#" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Landforms</a></li>
+                      <li><a href="#" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Climate Systems</a></li>
+                      <li><a href="#" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Ecosystems</a></li>
                     </ul>
                   </div>
                   <div>
                     <h3 className="font-semibold mb-2">Human Geography</h3>
                     <ul className="space-y-2 ml-6">
-                      <li><a href="#" className="text-gray-600">Population</a></li>
-                      <li><a href="#" className="text-gray-600">Cultural Geography</a></li>
-                      <li><a href="#" className="text-gray-600">Economic Geography</a></li>
+                      <li><a href="#" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Population</a></li>
+                      <li><a href="#" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Cultural Geography</a></li>
+                      <li><a href="#" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Economic Geography</a></li>
                     </ul>
                   </div>
                 </div>
               )}
 
-              <Link to="/skills" className="flex items-center gap-2 p-4 text-gray-600 hover:bg-gray-50">
+              <Link 
+                to="/skills" 
+                className="flex items-center gap-2 p-4 text-gray-600 hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 <GraduationCap size={20} />
                 <span>Skill Tests</span>
               </Link>
               
-              <Link to="/careers" className="flex items-center gap-2 p-4 text-gray-600 hover:bg-gray-50">
+              <Link 
+                to="/careers" 
+                className="flex items-center gap-2 p-4 text-gray-600 hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 <Briefcase size={20} />
                 <span>Careers</span>
               </Link>
               
-              <Link to="/interviews" className="flex items-center gap-2 p-4 text-gray-600 hover:bg-gray-50">
+              <Link 
+                to="/interviews" 
+                className="flex items-center gap-2 p-4 text-gray-600 hover:bg-gray-50"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 <Video size={20} />
                 <span>AI Interview</span>
               </Link>
